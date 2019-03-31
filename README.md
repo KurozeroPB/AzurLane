@@ -3,7 +3,7 @@ Api wrapper for my azur lane api
 
 ## Example
 ```js
-const { AzurLane } = require("../build/index");
+const { AzurLane } = require("azurlane");
 const al = new AzurLane();
 
 async function main() {

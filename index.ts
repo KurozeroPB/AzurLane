@@ -11,7 +11,7 @@ export class AzurLane {
     public options: Options;
     protected baseUrl: string = "https://azurlane-api.herokuapp.com/v1";
 
-    constructor(options: Options) {
+    public constructor(options: Options) {
         this.options = options;
     }
 
