@@ -64,54 +64,67 @@
 				<p>Api wrapper for my azur lane api</p>
 				<h2 id="example">Example</h2>
 				<pre><code class="language-js"><span class="hljs-keyword">const</span> AzurLane = <span class="hljs-built_in">require</span>(<span class="hljs-string">"azurlane"</span>);
-<span class="hljs-keyword">const</span> al = <span class="hljs-keyword">new</span> AzurLane();
+<span class="hljs-keyword">const</span> azurlane = <span class="hljs-keyword">new</span> AzurLane();
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> al.ship(<span class="hljs-string">"Akagi"</span>);
-    <span class="hljs-built_in">console</span>.log(data);
-    <span class="hljs-comment">/* example response
-    {   
-        id: '224',
-        names: {
-            full: 'IJN Akagi (cn: 凰; jp: 赤城)',
-            en: 'IJN Akagi',
-            cn: '凰',
-            jp: '赤城'
-        },
-        thumbnail: 'https://azurlane.koumakan.jp/w/images/3/3f/AkagiIcon.png',
-        skins:
-        [
-            { 
-                title: 'Default',
-                image: 'https://azurlane.koumakan.jp/w/images/thumb/0/06/Akagi.png/600px-Akagi.png'
-            },
-            {
-                title: 'Paradise Amaryllis',
-                image: 'https://azurlane.koumakan.jp/w/images/thumb/3/39/AkagiSummer.png/600px-AkagiSummer.png'
-            },
-            {
-                title: 'Plum and Snow',
-                image: 'https://azurlane.koumakan.jp/w/images/thumb/d/d0/AkagiNew_Year.png/533px-AkagiNew_Year.png'
-            },
-            {
-                title: 'Deep Crimson Poppy',
-                image: 'https://azurlane.koumakan.jp/w/images/thumb/6/65/AkagiPledge.png/505px-AkagiPledge.png'
-            } 
-        ],
-        buildTime: 'Drop Only',
-        rarity: 'Super Rare',
-        stars: {
-            value: '★★★☆☆☆',
-            count: 3
-        },
-        class: 'Akagi',
-        nationality: 'Sakura Empire',
-        hullType: 'Aircraft Carrier'
-    }
-   */</span>
+    <span class="hljs-keyword">const</span> ship = <span class="hljs-keyword">await</span> azurlane.ship(<span class="hljs-string">"Akagi"</span>);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${ship.names.en}</span>'s rarity is <span class="hljs-subst">${ship.rarity}</span>`</span>); <span class="hljs-comment">// IJN Akagi's rarity is Super Rare</span>
+
+    <span class="hljs-keyword">const</span> build = <span class="hljs-keyword">await</span> azurlane.buildInfo(<span class="hljs-string">"00:24:00"</span>);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Ships matching time <span class="hljs-subst">${build.time}</span>: <span class="hljs-subst">${build.ships.join(<span class="hljs-string">", "</span>)}</span>`</span>); <span class="hljs-comment">// Ships matching time 00:24:00: Foxhound, Fortune, Dace, Albacore</span>
 }
 
+<span class="hljs-comment">// Also catches any api errors that might occur like 400, 429, 500 http errors</span>
+<span class="hljs-comment">// Api errors extend the default error class, have a look at [ApiError](https://kurozeropb.github.io/AzurLane/classes/apierror.html) for information</span>
 main().catch(<span class="hljs-built_in">console</span>.error);</code></pre>
+				<h2 id="ship-data">Ship Data</h2>
+				<pre><code class="language-json">{
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"224"</span>,
+    <span class="hljs-attr">"names"</span>: {
+        <span class="hljs-attr">"full"</span>: <span class="hljs-string">"IJN Akagi (cn: 凰; jp: 赤城)"</span>,
+        <span class="hljs-attr">"en"</span>: <span class="hljs-string">"IJN Akagi"</span>,
+        <span class="hljs-attr">"cn"</span>: <span class="hljs-string">"凰"</span>,
+        <span class="hljs-attr">"jp"</span>: <span class="hljs-string">"赤城"</span>
+    },
+    <span class="hljs-attr">"thumbnail"</span>: <span class="hljs-string">"https://azurlane.koumakan.jp/w/images/3/3f/AkagiIcon.png"</span>,
+    <span class="hljs-attr">"skins"</span>: [
+        { 
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Default"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://azurlane.koumakan.jp/w/images/thumb/0/06/Akagi.png/600px-Akagi.png"</span>
+        },
+        {
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Paradise Amaryllis"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://azurlane.koumakan.jp/w/images/thumb/3/39/AkagiSummer.png/600px-AkagiSummer.png"</span>
+        },
+        {
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Plum and Snow"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://azurlane.koumakan.jp/w/images/thumb/d/d0/AkagiNew_Year.png/533px-AkagiNew_Year.png"</span>
+        },
+        {
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Deep Crimson Poppy"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://azurlane.koumakan.jp/w/images/thumb/6/65/AkagiPledge.png/505px-AkagiPledge.png"</span>
+        } 
+    ],
+    <span class="hljs-attr">"buildTime"</span>: <span class="hljs-string">"Drop Only"</span>,
+    <span class="hljs-attr">"rarity"</span>: <span class="hljs-string">"Super Rare"</span>,
+    <span class="hljs-attr">"stars"</span>: {
+        <span class="hljs-attr">"value"</span>: <span class="hljs-string">"★★★☆☆☆"</span>,
+        <span class="hljs-attr">"count"</span>: <span class="hljs-number">3</span>
+    },
+    <span class="hljs-attr">"class"</span>: <span class="hljs-string">"Akagi"</span>,
+    <span class="hljs-attr">"nationality"</span>: <span class="hljs-string">"Sakura Empire"</span>,
+    <span class="hljs-attr">"hullType"</span>: <span class="hljs-string">"Aircraft Carrier"</span>
+}</code></pre>
+				<h2 id="build-time-data">Build Time Data</h2>
+				<pre><code class="language-json">{
+    <span class="hljs-attr">"time"</span>: <span class="hljs-string">"00:24:00"</span>,
+    <span class="hljs-attr">"ships"</span>: [
+        <span class="hljs-string">"Foxhound"</span>,
+        <span class="hljs-string">"Fortune"</span>,
+        <span class="hljs-string">"Dace"</span>,
+        <span class="hljs-string">"Albacore"</span>
+    ]
+}</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
