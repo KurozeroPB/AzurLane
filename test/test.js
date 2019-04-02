@@ -3,6 +3,7 @@ const AzurLane = require("../dist/lib/index");
 
 describe("AzurLane", function() {
     const azurlane = new AzurLane();
+    assert(azurlane instanceof AzurLane, "azurlane did not construct properly");
 
     describe("#ship()", function() {
         it("should resolve to an object", async function() {
