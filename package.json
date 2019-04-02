@@ -28,7 +28,7 @@
     "example": "node test/example.js",
     "test": "mocha",
     "pretest": "yarn build",
-    "docs": "typedoc --theme markdown && cp _config.yml docs/",
+    "docs": "typedoc && cp .nojekyll docs/",
     "check": "gts check",
     "clean": "gts clean",
     "fix": "gts fix"

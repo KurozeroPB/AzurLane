@@ -13,6 +13,5 @@ module.exports = {
     readme: "README.md",
     name: "Azur Lane",
     ignoreCompilerErrors: true,
-    listInvalidSymbolLinks: true,
-    theme: "markdown"
+    listInvalidSymbolLinks: true
 };
