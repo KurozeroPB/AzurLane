@@ -4,10 +4,10 @@
   "description": "Api wrapper for the azur lane api",
   "main": "dist/lib/index.js",
   "types": "dist/lib/*.d.js",
-  "homepage": "https://github.com/KurozeroPB/AzurLane#readme",
+  "homepage": "https://kurozeropb.github.io/AzurLane/docs/index.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/KurozeroPB/AzurLane.git"
+    "url": "git+https://github.com/KurozeroPB/AzurLane.git"
   },
   "bugs": {
     "email": "bugs@kurozeropb.info",
