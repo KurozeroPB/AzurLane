@@ -15,7 +15,7 @@ async function main() {
 }
 
 // Also catches any api errors that might occur like 400, 429, 500 http errors
-// Api errors extend the default error class, have a look at [ApiError](https://kurozeropb.github.io/AzurLane/classes/apierror.html) for information
+// Api errors extend the default error class, have a look at https://kurozeropb.github.io/AzurLane/classes/apierror.html for information
 main().catch(console.error);
 ```
 
