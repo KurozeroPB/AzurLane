@@ -1,10 +1,10 @@
-export interface BaseResponse {
+export interface IBaseResponse {
     statusCode: number;
     statusMessage: string;
     message: string;
 }
 
-export interface ErrorResponse extends BaseResponse {
+export interface IErrorResponse extends IBaseResponse {
     error?: string | undefined;
 }
 
@@ -14,7 +14,7 @@ export class ApiError extends Error {
     public message: string;
     public error?: string;
 
-    constructor(errorResponse: ErrorResponse) {
+    constructor(errorResponse: IErrorResponse) {
         super(errorResponse.message);
 
         this.statusCode = errorResponse.statusCode;

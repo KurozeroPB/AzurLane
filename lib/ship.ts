@@ -1,35 +1,35 @@
-import { BaseResponse } from "./base";
+import { IBaseResponse } from "./base";
 
-export interface Names {
+export interface INames {
     full: string | null;
     en: string | null;
     cn: string | null;
     jp: string | null;
 }
 
-export interface Skins {
+export interface ISkins {
     title: string | null;
     image: string | null;
 }
 
-export interface Stars {
+export interface IStars {
     value: string | null;
     count: number;
 }
 
-export interface Ship {
+export interface IShip {
     id: string | null;
-    names: Names;
+    names: INames;
     thumbnail: string;
-    skins: Skins;
+    skins: ISkins;
     buildTime: string | null;
     rarity: string | null;
-    stars: Stars;
+    stars: IStars;
     class: string | null;
     nationality: string | null;
     hullType: string | null;
 }
 
-export interface ShipResponse extends BaseResponse {
-    ship: Ship;
+export interface IShipResponse extends IBaseResponse {
+    ship: IShip;
 }

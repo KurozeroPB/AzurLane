@@ -1,10 +1,10 @@
-import { BaseResponse } from "./base";
+import { IBaseResponse } from "./base";
 
-export interface Construction {
+export interface IConstruction {
     time: string;
     ships: string[];
 }
 
-export interface BuildResponse extends BaseResponse {
-    construction: Construction;
+export interface IBuildResponse extends IBaseResponse {
+    construction: IConstruction;
 }
