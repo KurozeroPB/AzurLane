@@ -31,7 +31,7 @@
 
 **● buildTime**: *`string` \| `null`*
 
-*Defined in [ship.ts:25](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/ship.ts#L25)*
+*Defined in [ship.ts:25](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/ship.ts#L25)*
 
 ___
 <a id="class"></a>
@@ -40,7 +40,7 @@ ___
 
 **● class**: *`string` \| `null`*
 
-*Defined in [ship.ts:28](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/ship.ts#L28)*
+*Defined in [ship.ts:28](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/ship.ts#L28)*
 
 ___
 <a id="hulltype"></a>
@@ -49,7 +49,7 @@ ___
 
 **● hullType**: *`string` \| `null`*
 
-*Defined in [ship.ts:30](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/ship.ts#L30)*
+*Defined in [ship.ts:30](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/ship.ts#L30)*
 
 ___
 <a id="id"></a>
@@ -58,7 +58,7 @@ ___
 
 **● id**: *`string` \| `null`*
 
-*Defined in [ship.ts:21](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/ship.ts#L21)*
+*Defined in [ship.ts:21](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/ship.ts#L21)*
 
 ___
 <a id="names"></a>
@@ -67,7 +67,7 @@ ___
 
 **● names**: *[INames](inames.md)*
 
-*Defined in [ship.ts:22](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/ship.ts#L22)*
+*Defined in [ship.ts:22](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/ship.ts#L22)*
 
 ___
 <a id="nationality"></a>
@@ -76,7 +76,7 @@ ___
 
 **● nationality**: *`string` \| `null`*
 
-*Defined in [ship.ts:29](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/ship.ts#L29)*
+*Defined in [ship.ts:29](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/ship.ts#L29)*
 
 ___
 <a id="rarity"></a>
@@ -85,7 +85,7 @@ ___
 
 **● rarity**: *`string` \| `null`*
 
-*Defined in [ship.ts:26](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/ship.ts#L26)*
+*Defined in [ship.ts:26](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/ship.ts#L26)*
 
 ___
 <a id="skins"></a>
@@ -94,7 +94,7 @@ ___
 
 **● skins**: *[ISkins](iskins.md)*
 
-*Defined in [ship.ts:24](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/ship.ts#L24)*
+*Defined in [ship.ts:24](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/ship.ts#L24)*
 
 ___
 <a id="stars"></a>
@@ -103,7 +103,7 @@ ___
 
 **● stars**: *[IStars](istars.md)*
 
-*Defined in [ship.ts:27](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/ship.ts#L27)*
+*Defined in [ship.ts:27](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/ship.ts#L27)*
 
 ___
 <a id="thumbnail"></a>
@@ -112,7 +112,7 @@ ___
 
 **● thumbnail**: *`string`*
 
-*Defined in [ship.ts:23](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/ship.ts#L23)*
+*Defined in [ship.ts:23](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/ship.ts#L23)*
 
 ___
 

@@ -34,7 +34,7 @@
 
 ⊕ **new ApiError**(errorResponse: *[IErrorResponse](../interfaces/ierrorresponse.md)*): [ApiError](apierror.md)
 
-*Defined in [base.ts:15](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/base.ts#L15)*
+*Defined in [base.ts:15](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/base.ts#L15)*
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ ___
 
 **● error**: *`undefined` \| `string`*
 
-*Defined in [base.ts:15](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/base.ts#L15)*
+*Defined in [base.ts:15](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/base.ts#L15)*
 
 ___
 <a id="message"></a>
@@ -65,7 +65,7 @@ ___
 
 *Overrides Error.message*
 
-*Defined in [base.ts:14](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/base.ts#L14)*
+*Defined in [base.ts:14](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/base.ts#L14)*
 
 ___
 <a id="name"></a>
@@ -98,7 +98,7 @@ ___
 
 **● statusCode**: *`number`*
 
-*Defined in [base.ts:12](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/base.ts#L12)*
+*Defined in [base.ts:12](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/base.ts#L12)*
 
 ___
 <a id="statusmessage"></a>
@@ -107,7 +107,7 @@ ___
 
 **● statusMessage**: *`string`*
 
-*Defined in [base.ts:13](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/base.ts#L13)*
+*Defined in [base.ts:13](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/base.ts#L13)*
 
 ___
 <a id="error-1"></a>

@@ -22,7 +22,7 @@
 
 **● userAgent**: *`undefined` \| `string`*
 
-*Defined in [index.ts:9](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/index.ts#L9)*
+*Defined in [index.ts:9](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/index.ts#L9)*
 
 ___
 

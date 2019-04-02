@@ -23,7 +23,7 @@
 
 **● ships**: *`string`[]*
 
-*Defined in [build.ts:5](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/build.ts#L5)*
+*Defined in [build.ts:5](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/build.ts#L5)*
 
 ___
 <a id="time"></a>
@@ -32,7 +32,7 @@ ___
 
 **● time**: *`string`*
 
-*Defined in [build.ts:4](https://github.com/KurozeroPB/AzurLane/blob/27a36d1/lib/build.ts#L4)*
+*Defined in [build.ts:4](https://github.com/KurozeroPB/AzurLane/blob/0054835/lib/build.ts#L4)*
 
 ___
 
