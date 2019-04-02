@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/KurozeroPB/AzurLane.git"
   },
+  "keywords": ["azurlane", "azur", "lane", "api", "azur-lane", "shipgirls", "waifu"],
   "bugs": {
     "email": "bugs@kurozeropb.info",
     "url": "https://github.com/KurozeroPB/AzurLane/issues"
@@ -27,7 +28,7 @@
     "example": "node test/example.js",
     "test": "mocha",
     "pretest": "yarn build",
-    "docs": "typedoc --out ./docs ./lib --readme ./README.md",
+    "docs": "typedoc --theme markdown",
     "check": "gts check",
     "clean": "gts clean",
     "fix": "gts fix"
@@ -41,6 +42,7 @@
     "gts": "^0.9.0",
     "mocha": "^6.0.2",
     "typedoc": "^0.14.2",
+    "typedoc-plugin-markdown": "^1.1.27",
     "typescript": "^3.4.1"
   }
 }
