@@ -21,7 +21,8 @@ export class AzurLane {
      * @param {string} [options.userAgent] UA to use when making http requests
      */
     public constructor(options?: IOptions) {
-        this.options = options ? options : { userAgent: `AzurLane/v${version} (https://www.npmjs.com/package/azurlane)` };
+        this.options = options ? options : {};
+        this.options.userAgent = (options && options.userAgent) ? options.userAgent : `AzurLane/v${version} (https://www.npmjs.com/package/azurlane)`
 
         this._axiosOptions = {
             headers: {
@@ -41,8 +42,12 @@ export class AzurLane {
         try {
             response = await axios.get(`${this.baseUrl}/ship?name=${name}`, this._axiosOptions);
         } catch (error) {
-            const data: IErrorResponse = error.response.data;
-            throw new ApiError(data);
+            if (error.response && error.response.data) {
+                const data: IErrorResponse = error.response.data;
+                throw new ApiError(data);
+            } else {
+                throw error;
+            }
         }
 
         const data: IShipResponse = response.data;
@@ -60,8 +65,12 @@ export class AzurLane {
         try {
             response = await axios.get(`${this.baseUrl}/build?time=${time}`, this._axiosOptions);
         } catch (error) {
-            const data: IErrorResponse = error.response.data;
-            throw new ApiError(data);
+            if (error.response && error.response.data) {
+                const data: IErrorResponse = error.response.data;
+                throw new ApiError(data);
+            } else {
+                throw error;
+            }
         }
 
         const data: IBuildResponse = response.data;
