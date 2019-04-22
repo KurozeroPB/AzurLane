@@ -12,11 +12,11 @@ export interface IOptions {
 export class AzurLane {
     /** @hidden */
     private _axiosOptions: AxiosRequestConfig;
-    protected baseUrl: string = "https://azurlane-api.herokuapp.com/v1";
+    protected baseUrl: string = "https://api.kurozeropb.info/v1/azurlane";
     public options: IOptions;
 
     /**
-     * 
+     *
      * @param {IOptions} options Constructor options
      * @param {string} [options.userAgent] UA to use when making http requests
      */
@@ -33,7 +33,7 @@ export class AzurLane {
 
     /**
      * Get information about a ship by name
-     * 
+     *
      * @param {string} name The name of the ship
      * @returns {Promise<IShip>}
      */
@@ -56,7 +56,7 @@ export class AzurLane {
 
     /**
      * Get ship names matching the given construction time
-     * 
+     *
      * @param {string} time The construction time
      * @returns {Promise<IConstruction>}
      */

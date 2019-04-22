@@ -1,6 +1,6 @@
 {
   "name": "azurlane",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Api wrapper for the azur lane api",
   "main": "dist/lib/index.js",
   "types": "dist/lib/*.d.js",
