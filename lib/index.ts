@@ -12,7 +12,7 @@ export interface IOptions {
 export class AzurLane {
     /** @hidden */
     private _axiosOptions: AxiosRequestConfig;
-    protected baseUrl: string = "https://api.kurozeropb.info/v1/azurlane";
+    protected baseUrl = "https://api.kurozeropb.info/v1/azurlane";
     public options: IOptions;
 
     /**
@@ -22,13 +22,13 @@ export class AzurLane {
      */
     public constructor(options?: IOptions) {
         this.options = options ? options : {};
-        this.options.userAgent = (options && options.userAgent) ? options.userAgent : `AzurLane/v${version} (https://www.npmjs.com/package/azurlane)`
+        this.options.userAgent = (options && options.userAgent) ? options.userAgent : `AzurLane/v${version} (https://www.npmjs.com/package/azurlane)`;
 
         this._axiosOptions = {
             headers: {
                 "User-Agent": this.options.userAgent
             }
-        }
+        };
     }
 
     /**
@@ -82,5 +82,4 @@ export { IBaseResponse, IErrorResponse, ApiError } from "./base";
 export { IConstruction, IBuildResponse } from "./build";
 export { INames, ISkins, IStars, IShip, IShipResponse } from "./ship";
 
-// @ts-ignore
-export = AzurLane;
+export default AzurLane;

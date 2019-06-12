@@ -14,7 +14,7 @@ export class ApiError extends Error {
     public message: string;
     public error?: string;
 
-    constructor(errorResponse: IErrorResponse) {
+    public constructor(errorResponse: IErrorResponse) {
         super(errorResponse.message);
 
         this.statusCode = errorResponse.statusCode;
