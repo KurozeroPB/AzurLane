@@ -1,13 +1,13 @@
 import { IBaseResponse } from "./base";
 
 export interface INames {
-    full: string | null;
     en: string | null;
     cn: string | null;
     jp: string | null;
+    kr: string | null;
 }
 
-export interface ISkins {
+export interface ISkin {
     title: string | null;
     image: string | null;
 }
@@ -17,17 +17,34 @@ export interface IStars {
     count: number;
 }
 
+export interface IMiscellaneousInfo {
+    link: string;
+    name: string;
+}
+
+export interface IMiscellaneous {
+    artist: IMiscellaneousInfo | null;
+    web: IMiscellaneousInfo | null;
+    pixiv: IMiscellaneousInfo | null;
+    twitter: IMiscellaneousInfo | null;
+    voiceActress: IMiscellaneousInfo | null;
+}
+
 export interface IShip {
+    wikiUrl: string;
     id: string | null;
     names: INames;
     thumbnail: string;
-    skins: ISkins;
+    chibi: string;
+    skins: ISkin[];
     buildTime: string | null;
     rarity: string | null;
     stars: IStars;
     class: string | null;
     nationality: string | null;
+    nationalityShort: string | null;
     hullType: string | null;
+    miscellaneous: IMiscellaneous;
 }
 
 export interface IShipResponse extends IBaseResponse {

@@ -80,6 +80,6 @@ export class AzurLane {
 
 export { IBaseResponse, IErrorResponse, ApiError } from "./base";
 export { IConstruction, IBuildResponse } from "./build";
-export { INames, ISkins, IStars, IShip, IShipResponse } from "./ship";
+export { INames, ISkin, IStars, IMiscellaneous, IMiscellaneousInfo, IShip, IShipResponse } from "./ship";
 
 export default AzurLane;

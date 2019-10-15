@@ -1,6 +1,6 @@
 {
   "name": "azurlane",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Api wrapper for the azur lane api",
   "main": "dist/lib/index.js",
   "homepage": "https://kurozeropb.github.io/AzurLane/index.html",
@@ -21,7 +21,6 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "publish": "npm publish",
     "prepare": "yarn build",
     "build": "yarn check && yarn clean && tsc",
     "example": "node test/example.js",
@@ -36,12 +35,12 @@
     "axios": "^0.19.0"
   },
   "devDependencies": {
-    "@types/node": "^12.0.8",
-    "gh-pages": "^2.0.1",
-    "gts": "^1.0.0",
-    "mocha": "^6.1.4",
-    "typedoc": "^0.14.2",
-    "typedoc-plugin-markdown": "^1.2.1",
-    "typescript": "^3.5.1"
+    "@types/node": "^12.7.12",
+    "gh-pages": "^2.1.1",
+    "gts": "^1.1.0",
+    "mocha": "^6.2.1",
+    "typedoc": "^0.15.0",
+    "typedoc-plugin-markdown": "^2.2.10",
+    "typescript": "^3.6.4"
   }
 }
