@@ -100,15 +100,6 @@ export declare class AzurLane {
 	 */
 	getShipByName(name: string): Promise<IShip>;
 	/**
-	 * @since 0.1.0
-	 *
-	 * Get information about a ship by id
-	 *
-	 * @param {number} id The id of the ship
-	 * @returns {Promise<IShip>}
-	 */
-	getShipById(id: number): Promise<IShip>;
-	/**
 	 * @since 0.0.1
 	 *
 	 * Get ship names matching the given construction time
