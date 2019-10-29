@@ -26,7 +26,7 @@
 
 • **message**: *string*
 
-*Defined in [base.ts:4](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/base.ts#L4)*
+*Defined in [base.ts:4](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/base.ts#L4)*
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 • **statusCode**: *number*
 
-*Defined in [base.ts:2](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/base.ts#L2)*
+*Defined in [base.ts:2](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/base.ts#L2)*
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 • **statusMessage**: *string*
 
-*Defined in [base.ts:3](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/base.ts#L3)*
+*Defined in [base.ts:3](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/base.ts#L3)*

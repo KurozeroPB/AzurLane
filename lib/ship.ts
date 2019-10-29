@@ -17,6 +17,18 @@ export interface IStars {
     count: number;
 }
 
+export interface IStatsItem {
+    name: string | null;
+    image: string | null;
+    value: string | null;
+}
+
+export interface IStats {
+    base?: IStatsItem[];
+    100?: IStatsItem[];
+    120?: IStatsItem[];
+}
+
 export interface IMiscellaneousInfo {
     link: string;
     name: string;
@@ -35,7 +47,6 @@ export interface IShip {
     id: string | null;
     names: INames;
     thumbnail: string;
-    chibi: string;
     skins: ISkin[];
     buildTime: string | null;
     rarity: string | null;
@@ -44,6 +55,7 @@ export interface IShip {
     nationality: string | null;
     nationalityShort: string | null;
     hullType: string | null;
+    stats: IStats;
     miscellaneous: IMiscellaneous;
 }
 

@@ -18,4 +18,4 @@
 
 • **userAgent**? : *undefined | string*
 
-*Defined in [index.ts:9](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/index.ts#L9)*
+*Defined in [index.ts:9](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/index.ts#L9)*

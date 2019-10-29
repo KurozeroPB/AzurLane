@@ -23,3 +23,5 @@
 * [IShipResponse](interfaces/ishipresponse.md)
 * [ISkin](interfaces/iskin.md)
 * [IStars](interfaces/istars.md)
+* [IStats](interfaces/istats.md)
+* [IStatsItem](interfaces/istatsitem.md)

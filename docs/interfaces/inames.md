@@ -21,7 +21,7 @@
 
 • **cn**: *string | null*
 
-*Defined in [ship.ts:5](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/ship.ts#L5)*
+*Defined in [ship.ts:5](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/ship.ts#L5)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **en**: *string | null*
 
-*Defined in [ship.ts:4](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/ship.ts#L4)*
+*Defined in [ship.ts:4](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/ship.ts#L4)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **jp**: *string | null*
 
-*Defined in [ship.ts:6](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/ship.ts#L6)*
+*Defined in [ship.ts:6](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/ship.ts#L6)*
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **kr**: *string | null*
 
-*Defined in [ship.ts:7](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/ship.ts#L7)*
+*Defined in [ship.ts:7](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/ship.ts#L7)*

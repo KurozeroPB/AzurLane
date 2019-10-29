@@ -19,7 +19,7 @@
 
 • **ships**: *string[]*
 
-*Defined in [build.ts:5](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/build.ts#L5)*
+*Defined in [build.ts:5](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/build.ts#L5)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **time**: *string*
 
-*Defined in [build.ts:4](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/build.ts#L4)*
+*Defined in [build.ts:4](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/build.ts#L4)*

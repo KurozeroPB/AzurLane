@@ -27,7 +27,7 @@
 
 \+ **new AzurLane**(`options?`: [IOptions](../interfaces/ioptions.md)): *[AzurLane](azurlane.md)*
 
-*Defined in [index.ts:16](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/index.ts#L16)*
+*Defined in [index.ts:16](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/index.ts#L16)*
 
 **Parameters:**
 
@@ -43,7 +43,7 @@ Name | Type | Description |
 
 • **options**: *[IOptions](../interfaces/ioptions.md)*
 
-*Defined in [index.ts:16](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/index.ts#L16)*
+*Defined in [index.ts:16](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/index.ts#L16)*
 
 ## Methods
 
@@ -51,7 +51,7 @@ Name | Type | Description |
 
 ▸ **buildInfo**(`time`: string): *Promise‹[IConstruction](../interfaces/iconstruction.md)›*
 
-*Defined in [index.ts:63](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/index.ts#L63)*
+*Defined in [index.ts:63](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/index.ts#L63)*
 
 Get ship names matching the given construction time
 
@@ -69,7 +69,7 @@ ___
 
 ▸ **ship**(`name`: string): *Promise‹[IShip](../interfaces/iship.md)›*
 
-*Defined in [index.ts:40](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/index.ts#L40)*
+*Defined in [index.ts:40](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/index.ts#L40)*
 
 Get information about a ship by name
 

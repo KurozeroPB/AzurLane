@@ -1,6 +1,6 @@
 {
   "name": "azurlane",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Api wrapper for the azur lane api",
   "main": "dist/lib/index.js",
   "homepage": "https://kurozeropb.github.io/AzurLane/index.html",
@@ -26,7 +26,7 @@
     "example": "node test/example.js",
     "test": "mocha",
     "pretest": "yarn build",
-    "docs": "typedoc && cp .nojekyll docs/",
+    "docs": "typedoc",
     "check": "gts check",
     "clean": "gts clean",
     "fix": "gts fix"

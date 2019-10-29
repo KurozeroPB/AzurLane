@@ -22,7 +22,7 @@
 
 • **artist**: *[IMiscellaneousInfo](imiscellaneousinfo.md) | null*
 
-*Defined in [ship.ts:26](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/ship.ts#L26)*
+*Defined in [ship.ts:38](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/ship.ts#L38)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **pixiv**: *[IMiscellaneousInfo](imiscellaneousinfo.md) | null*
 
-*Defined in [ship.ts:28](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/ship.ts#L28)*
+*Defined in [ship.ts:40](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/ship.ts#L40)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **twitter**: *[IMiscellaneousInfo](imiscellaneousinfo.md) | null*
 
-*Defined in [ship.ts:29](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/ship.ts#L29)*
+*Defined in [ship.ts:41](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/ship.ts#L41)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **voiceActress**: *[IMiscellaneousInfo](imiscellaneousinfo.md) | null*
 
-*Defined in [ship.ts:30](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/ship.ts#L30)*
+*Defined in [ship.ts:42](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/ship.ts#L42)*
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **web**: *[IMiscellaneousInfo](imiscellaneousinfo.md) | null*
 
-*Defined in [ship.ts:27](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/ship.ts#L27)*
+*Defined in [ship.ts:39](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/ship.ts#L39)*

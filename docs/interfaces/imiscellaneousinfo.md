@@ -19,7 +19,7 @@
 
 • **link**: *string*
 
-*Defined in [ship.ts:21](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/ship.ts#L21)*
+*Defined in [ship.ts:33](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/ship.ts#L33)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **name**: *string*
 
-*Defined in [ship.ts:22](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/ship.ts#L22)*
+*Defined in [ship.ts:34](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/ship.ts#L34)*

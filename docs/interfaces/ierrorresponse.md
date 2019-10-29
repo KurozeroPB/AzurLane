@@ -23,7 +23,7 @@
 
 • **error**? : *string | undefined*
 
-*Defined in [base.ts:8](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/base.ts#L8)*
+*Defined in [base.ts:8](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/base.ts#L8)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 *Inherited from [IBaseResponse](ibaseresponse.md).[message](ibaseresponse.md#message)*
 
-*Defined in [base.ts:4](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/base.ts#L4)*
+*Defined in [base.ts:4](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/base.ts#L4)*
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 *Inherited from [IBaseResponse](ibaseresponse.md).[statusCode](ibaseresponse.md#statuscode)*
 
-*Defined in [base.ts:2](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/base.ts#L2)*
+*Defined in [base.ts:2](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/base.ts#L2)*
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 *Inherited from [IBaseResponse](ibaseresponse.md).[statusMessage](ibaseresponse.md#statusmessage)*
 
-*Defined in [base.ts:3](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/base.ts#L3)*
+*Defined in [base.ts:3](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/base.ts#L3)*

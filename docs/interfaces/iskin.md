@@ -19,7 +19,7 @@
 
 • **image**: *string | null*
 
-*Defined in [ship.ts:12](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/ship.ts#L12)*
+*Defined in [ship.ts:12](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/ship.ts#L12)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **title**: *string | null*
 
-*Defined in [ship.ts:11](https://github.com/KurozeroPB/AzurLane/blob/3106872/lib/ship.ts#L11)*
+*Defined in [ship.ts:11](https://github.com/KurozeroPB/AzurLane/blob/af03464/lib/ship.ts#L11)*
