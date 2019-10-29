@@ -1,7 +1,24 @@
 {
+    "defaultSeverity": "error",
     "extends": "gts/tslint.json",
+    "jsRules": {},
     "rules": {
-        "quotemark": [true, "double", "avoid-escape", "avoid-template"]
-    }
+        "import-name": false,
+        "quotemark": [
+            true,
+            "double",
+            "avoid-escape",
+            "avoid-template"
+        ],
+        "indent": [
+            true,
+            "spaces",
+            4
+        ],
+        "trailing-comma": [
+            true,
+            "never"
+        ]
+    },
+    "rulesDirectory": []
 }
-

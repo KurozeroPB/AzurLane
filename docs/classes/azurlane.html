@@ -89,8 +89,9 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="azurlane.html#buildinfo" class="tsd-kind-icon">build<wbr>Info</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="azurlane.html#ship" class="tsd-kind-icon">ship</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="azurlane.html#getbuildinfo" class="tsd-kind-icon">get<wbr>Build<wbr>Info</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="azurlane.html#getshipbyid" class="tsd-kind-icon">get<wbr>Ship<wbr>ById</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="azurlane.html#getshipbyname" class="tsd-kind-icon">get<wbr>Ship<wbr>ByName</a></li>
 							</ul>
 						</section>
 					</div>
@@ -108,7 +109,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/KurozeroPB/AzurLane/blob/e6c68fc/lib/index.ts#L16">index.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/KurozeroPB/AzurLane/blob/eaf3542/lib/index.d.ts#L86">index.d.ts:86</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -137,7 +138,7 @@
 					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ioptions.html" class="tsd-signature-type">IOptions</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/KurozeroPB/AzurLane/blob/e6c68fc/lib/index.ts#L16">index.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/KurozeroPB/AzurLane/blob/eaf3542/lib/index.d.ts#L86">index.d.ts:86</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -145,22 +146,25 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="buildinfo" class="tsd-anchor"></a>
-					<h3>build<wbr>Info</h3>
+					<a name="getbuildinfo" class="tsd-anchor"></a>
+					<h3>get<wbr>Build<wbr>Info</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">build<wbr>Info<span class="tsd-signature-symbol">(</span>time<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iconstruction.html" class="tsd-signature-type">IConstruction</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Build<wbr>Info<span class="tsd-signature-symbol">(</span>time<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iconstruction.html" class="tsd-signature-type">IConstruction</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/KurozeroPB/AzurLane/blob/e6c68fc/lib/index.ts#L63">index.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/KurozeroPB/AzurLane/blob/eaf3542/lib/index.d.ts#L119">index.d.ts:119</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Get ship names matching the given construction time</p>
-								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>0.0.1</p>
+										<p>Get ship names matching the given construction time</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -176,22 +180,59 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="ship" class="tsd-anchor"></a>
-					<h3>ship</h3>
+					<a name="getshipbyid" class="tsd-anchor"></a>
+					<h3>get<wbr>Ship<wbr>ById</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">ship<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iship.html" class="tsd-signature-type">IShip</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Ship<wbr>ById<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iship.html" class="tsd-signature-type">IShip</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/KurozeroPB/AzurLane/blob/e6c68fc/lib/index.ts#L40">index.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/KurozeroPB/AzurLane/blob/eaf3542/lib/index.d.ts#L110">index.d.ts:110</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Get information about a ship by name</p>
-								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>0.1.0</p>
+										<p>Get information about a ship by id</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The id of the ship</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iship.html" class="tsd-signature-type">IShip</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getshipbyname" class="tsd-anchor"></a>
+					<h3>get<wbr>Ship<wbr>ByName</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Ship<wbr>ByName<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iship.html" class="tsd-signature-type">IShip</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/KurozeroPB/AzurLane/blob/eaf3542/lib/index.d.ts#L101">index.d.ts:101</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>0.0.1</p>
+										<p>Get information about a ship by name</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -233,10 +274,13 @@
 								<a href="azurlane.html#options" class="tsd-kind-icon">options</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="azurlane.html#buildinfo" class="tsd-kind-icon">build<wbr>Info</a>
+								<a href="azurlane.html#getbuildinfo" class="tsd-kind-icon">get<wbr>Build<wbr>Info</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="azurlane.html#ship" class="tsd-kind-icon">ship</a>
+								<a href="azurlane.html#getshipbyid" class="tsd-kind-icon">get<wbr>Ship<wbr>ById</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="azurlane.html#getshipbyname" class="tsd-kind-icon">get<wbr>Ship<wbr>ByName</a>
 							</li>
 						</ul>
 					</li>

@@ -5,7 +5,7 @@ export interface IBaseResponse {
 }
 
 export interface IErrorResponse extends IBaseResponse {
-    error?: string | undefined;
+    error?: string;
 }
 
 export class ApiError extends Error {
@@ -14,12 +14,12 @@ export class ApiError extends Error {
     public message: string;
     public error?: string;
 
-    public constructor(errorResponse: IErrorResponse) {
-        super(errorResponse.message);
+    public constructor(response: IErrorResponse) {
+        super(response.message);
 
-        this.statusCode = errorResponse.statusCode;
-        this.statusMessage = errorResponse.statusMessage;
-        this.message = errorResponse.message;
-        this.error = errorResponse.error;
+        this.statusCode = response.statusCode;
+        this.statusMessage = response.statusMessage;
+        this.message = response.message;
+        this.error = response.error;
     }
 }

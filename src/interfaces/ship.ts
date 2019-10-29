@@ -35,11 +35,11 @@ export interface IMiscellaneousInfo {
 }
 
 export interface IMiscellaneous {
-    artist: IMiscellaneousInfo | null;
-    web: IMiscellaneousInfo | null;
-    pixiv: IMiscellaneousInfo | null;
-    twitter: IMiscellaneousInfo | null;
-    voiceActress: IMiscellaneousInfo | null;
+    artist?: IMiscellaneousInfo;
+    web?: IMiscellaneousInfo;
+    pixiv?: IMiscellaneousInfo;
+    twitter?: IMiscellaneousInfo;
+    voiceActress?: IMiscellaneousInfo;
 }
 
 export interface IShip {
