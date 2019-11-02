@@ -76,6 +76,10 @@ export interface IShip {
 export interface IShipResponse extends IBaseResponse {
 	ship: IShip;
 }
+export interface IBaseShip {
+	id: string;
+	name: string;
+}
 export interface IOptions {
 	userAgent?: string;
 }
@@ -108,6 +112,33 @@ export declare class AzurLane {
 	 * @returns {Promise<IShip>}
 	 */
 	getShipById(id: string): Promise<IShip>;
+	/**
+	 * @since 1.2.0
+	 *
+	 * Get a list of ships from the rarity
+	 *
+	 * @param rarity The rarity of the ships
+	 * @returns {Promise<IBaseShip[]>}
+	 */
+	getShipsWithRarity(rarity: string): Promise<IBaseShip[]>;
+	/**
+	 * @since 1.2.0
+	 *
+	 * Get a list of ships from the type
+	 *
+	 * @param type The type of the ships
+	 * @returns {Promise<IBaseShip[]>}
+	 */
+	getShipsWithType(type: string): Promise<IBaseShip[]>;
+	/**
+	 * @since 1.2.0
+	 *
+	 * Get a list of ships from the affiliation
+	 *
+	 * @param affiliation The affiliation of the ships
+	 * @returns {Promise<IBaseShip[]>}
+	 */
+	getShipsWithAffiliation(affiliation: string): Promise<IBaseShip[]>;
 	/**
 	 * @since 0.0.1
 	 *

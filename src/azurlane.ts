@@ -2,6 +2,7 @@ import axios, { AxiosRequestConfig } from "axios";
 import { ApiError } from "./interfaces/base";
 import { IConstruction, IBuildResponse } from "./interfaces/build";
 import { IShip, IShipResponse } from "./interfaces/ship";
+import { IBaseShip, IShipsResponse } from "./interfaces/ships";
 
 export interface IOptions {
     userAgent?: string;
@@ -62,6 +63,69 @@ export class AzurLane {
         try {
             const response = await axios.get<IShipResponse>(`${this.baseUrl}/ship?id=${id}`, this._axiosOptions);
             return response.data.ship;
+        } catch (error) {
+            if (error.response && error.response.data) {
+                throw new ApiError(error.response.data);
+            } else {
+                throw error;
+            }
+        }
+    }
+
+    /**
+     * @since 1.2.0
+     * 
+     * Get a list of ships from the rarity
+     * 
+     * @param rarity The rarity of the ships
+     * @returns {Promise<IBaseShip[]>}
+     */
+    public async getShipsWithRarity(rarity: string): Promise<IBaseShip[]> {
+        try {
+            const response = await axios.get<IShipsResponse>(`${this.baseUrl}/ships?orderBy=rarity&rarity${rarity}`, this._axiosOptions);
+            return response.data.ships;
+        } catch (error) {
+            if (error.response && error.response.data) {
+                throw new ApiError(error.response.data);
+            } else {
+                throw error;
+            }
+        }
+    }
+
+    /**
+     * @since 1.2.0
+     * 
+     * Get a list of ships from the type
+     * 
+     * @param type The type of the ships
+     * @returns {Promise<IBaseShip[]>}
+     */
+    public async getShipsWithType(type: string): Promise<IBaseShip[]> {
+        try {
+            const response = await axios.get<IShipsResponse>(`${this.baseUrl}/ships?orderBy=type&type${type}`, this._axiosOptions);
+            return response.data.ships;
+        } catch (error) {
+            if (error.response && error.response.data) {
+                throw new ApiError(error.response.data);
+            } else {
+                throw error;
+            }
+        }
+    }
+
+    /**
+     * @since 1.2.0
+     * 
+     * Get a list of ships from the affiliation
+     * 
+     * @param affiliation The affiliation of the ships
+     * @returns {Promise<IBaseShip[]>}
+     */
+    public async getShipsWithAffiliation(affiliation: string): Promise<IBaseShip[]> {
+        try {
+            const response = await axios.get<IShipsResponse>(`${this.baseUrl}/ships?orderBy=affiliation&affiliation${affiliation}`, this._axiosOptions);
+            return response.data.ships;
         } catch (error) {
             if (error.response && error.response.data) {
                 throw new ApiError(error.response.data);
