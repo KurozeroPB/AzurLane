@@ -5,7 +5,7 @@ export default [
     {
         input: "src/index.ts",
         plugins: [typescript()],
-        external: ["axios"],
+        external: ["axios", "deprecated-decorator"],
         output: [
             {
                 file: `${pkg.main}.js`,

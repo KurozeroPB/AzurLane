@@ -1,4 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
+import deprecated from "deprecated-decorator";
 import { ApiError } from "./interfaces/base";
 import { IConstruction, IBuildResponse } from "./interfaces/build";
 import { IShip, IShipResponse } from "./interfaces/ship";
@@ -101,7 +102,7 @@ export class AzurLane {
     }
 
     /**
-     * @deprecated
+     * @deprecated Deprecated since 1.3.0 use getShips() instead, this method will be remove in 2.0.0
      * @since 1.2.0
      * 
      * Get a list of ships from the rarity
@@ -109,12 +110,22 @@ export class AzurLane {
      * @param rarity The rarity of the ships
      * @returns {Promise<IBaseShip[]>}
      */
+    @deprecated("getShips", "1.3.0")
     public async getShipsWithRarity(rarity: string): Promise<IBaseShip[]> {
-        throw new Error("getShipsWithRarity() is deprecated, use getShips(orderBy: Order, value: string) instead");
+        try {
+            const response = await axios.get<IShipsResponse>(`${this.baseUrl}/ships?orderBy=rarity&rarity=${rarity}`, this._axiosOptions);
+            return response.data.ships;
+        } catch (error) {
+            if (error.response && error.response.data) {
+                throw new ApiError(error.response.data);
+            } else {
+                throw error;
+            }
+        }
     }
 
     /**
-     * @deprecated
+     * @deprecated Deprecated since 1.3.0 use getShips() instead, this method will be remove in 2.0.0
      * @since 1.2.0
      * 
      * Get a list of ships from the type
@@ -122,12 +133,22 @@ export class AzurLane {
      * @param type The type of the ships
      * @returns {Promise<IBaseShip[]>}
      */
+    @deprecated("getShips", "1.3.0")
     public async getShipsWithType(type: string): Promise<IBaseShip[]> {
-        throw new Error("getShipsWithType() is deprecated, use getShips(orderBy: Order, value: string) instead");
+        try {
+            const response = await axios.get<IShipsResponse>(`${this.baseUrl}/ships?orderBy=type&type=${type}`, this._axiosOptions);
+            return response.data.ships;
+        } catch (error) {
+            if (error.response && error.response.data) {
+                throw new ApiError(error.response.data);
+            } else {
+                throw error;
+            }
+        }
     }
 
     /**
-     * @deprecated
+     * @deprecated Deprecated since 1.3.0 use getShips() instead, this method will be remove in 2.0.0
      * @since 1.2.0
      * 
      * Get a list of ships from the affiliation
@@ -135,8 +156,18 @@ export class AzurLane {
      * @param affiliation The affiliation of the ships
      * @returns {Promise<IBaseShip[]>}
      */
+    @deprecated("getShips", "1.3.0")
     public async getShipsWithAffiliation(affiliation: string): Promise<IBaseShip[]> {
-        throw new Error("getShipsWithAffiliation() is deprecated, use getShips(orderBy: Order, value: string) instead");
+        try {
+            const response = await axios.get<IShipsResponse>(`${this.baseUrl}/ships?orderBy=affiliation&affiliation=${affiliation}`, this._axiosOptions);
+            return response.data.ships;
+        } catch (error) {
+            if (error.response && error.response.data) {
+                throw new ApiError(error.response.data);
+            } else {
+                throw error;
+            }
+        }
     }
 
     /**

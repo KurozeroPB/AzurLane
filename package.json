@@ -1,6 +1,6 @@
 {
     "name": "azurlane",
-    "version": "1.3.0",
+    "version": "1.4.1",
     "description": "Api wrapper for the azur lane api",
     "main": "lib/index",
     "module": "lib/index.mjs",
@@ -46,7 +46,8 @@
         "eslint:fix": "eslint --ext .ts --fix ."
     },
     "dependencies": {
-        "axios": "^0.19.0"
+        "axios": "^0.19.0",
+        "deprecated-decorator": "^0.1.6"
     },
     "devDependencies": {
         "@types/jest": "^24.0.22",

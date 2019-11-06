@@ -128,7 +128,7 @@ export declare class AzurLane {
 	 */
 	getShips(orderBy: Order, value: string): Promise<IBaseShip[]>;
 	/**
-	 * @deprecated
+	 * @deprecated Deprecated since 1.3.0 use getShips() instead, this method will be remove in 2.0.0
 	 * @since 1.2.0
 	 *
 	 * Get a list of ships from the rarity
@@ -138,7 +138,7 @@ export declare class AzurLane {
 	 */
 	getShipsWithRarity(rarity: string): Promise<IBaseShip[]>;
 	/**
-	 * @deprecated
+	 * @deprecated Deprecated since 1.3.0 use getShips() instead, this method will be remove in 2.0.0
 	 * @since 1.2.0
 	 *
 	 * Get a list of ships from the type
@@ -148,7 +148,7 @@ export declare class AzurLane {
 	 */
 	getShipsWithType(type: string): Promise<IBaseShip[]>;
 	/**
-	 * @deprecated
+	 * @deprecated Deprecated since 1.3.0 use getShips() instead, this method will be remove in 2.0.0
 	 * @since 1.2.0
 	 *
 	 * Get a list of ships from the affiliation
