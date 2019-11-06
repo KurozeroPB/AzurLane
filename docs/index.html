@@ -67,15 +67,19 @@
 				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
 					<h2>Example</h2>
 				</a>
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> AzurLane = <span class="hljs-built_in">require</span>(<span class="hljs-string">"azurlane"</span>);
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { AzurLane, Order } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"azurlane"</span>);
 <span class="hljs-keyword">const</span> azurlane = <span class="hljs-keyword">new</span> AzurLane();
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">const</span> ship = <span class="hljs-keyword">await</span> azurlane.ship(<span class="hljs-string">"Akagi"</span>);
+    <span class="hljs-comment">// Get specific ship by name, in this case "Akagi"</span>
+    <span class="hljs-keyword">const</span> ship = <span class="hljs-keyword">await</span> azurlane.getShipByName(<span class="hljs-string">"Akagi"</span>);
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${ship.names.en}</span>'s rarity is <span class="hljs-subst">${ship.rarity}</span>`</span>); <span class="hljs-comment">// IJN Akagi's rarity is Super Rare</span>
 
-    <span class="hljs-keyword">const</span> build = <span class="hljs-keyword">await</span> azurlane.buildInfo(<span class="hljs-string">"00:24:00"</span>);
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Ships matching time <span class="hljs-subst">${build.time}</span>: <span class="hljs-subst">${build.ships.join(<span class="hljs-string">", "</span>)}</span>`</span>); <span class="hljs-comment">// Ships matching time 00:24:00: Foxhound, Fortune, Dace, Albacore</span>
+    <span class="hljs-comment">// Get an array of ships with rarity "Super Rare"</span>
+    <span class="hljs-keyword">const</span> ships = <span class="hljs-keyword">await</span> azurlane.getShips(Order.RARITY, <span class="hljs-string">"Super Rare"</span>);
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; ships.length; i++) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`[<span class="hljs-subst">${ships[i].id}</span>] = <span class="hljs-subst">${ships[i].name}</span>`</span>); <span class="hljs-comment">// [036] = San Diego</span>
+    }
 }
 
 <span class="hljs-comment">// Also catches any api errors that might occur like 400, 429, 500 http errors</span>
@@ -145,6 +149,9 @@ main().catch(<span class="hljs-built_in">console</span>.error);</code></pre>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="enums/order.html" class="tsd-kind-icon">Order</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/apierror.html" class="tsd-kind-icon">Api<wbr>Error</a>
 					</li>

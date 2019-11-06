@@ -83,6 +83,11 @@ export interface IBaseShip {
 export interface IOptions {
 	userAgent?: string;
 }
+export declare enum Order {
+	RARITY = "rarity",
+	TYPE = "type",
+	AFFILIATION = "affiliation"
+}
 export declare class AzurLane {
 	/** @hidden */
 	private _axiosOptions;
@@ -113,6 +118,17 @@ export declare class AzurLane {
 	 */
 	getShipById(id: string): Promise<IShip>;
 	/**
+	 * @since 1.3.0
+	 *
+	 * Get a list of ships from rarity, type or affiliation
+	 *
+	 * @param {Order} orderBy The order
+	 * @param {string} value Value depends on what order is used, e.g. if `Order.RARITY` is used value can be `Super Rare`
+	 * @returns {Promise<IBaseShip[]>}
+	 */
+	getShips(orderBy: Order, value: string): Promise<IBaseShip[]>;
+	/**
+	 * @deprecated
 	 * @since 1.2.0
 	 *
 	 * Get a list of ships from the rarity
@@ -122,6 +138,7 @@ export declare class AzurLane {
 	 */
 	getShipsWithRarity(rarity: string): Promise<IBaseShip[]>;
 	/**
+	 * @deprecated
 	 * @since 1.2.0
 	 *
 	 * Get a list of ships from the type
@@ -131,6 +148,7 @@ export declare class AzurLane {
 	 */
 	getShipsWithType(type: string): Promise<IBaseShip[]>;
 	/**
+	 * @deprecated
 	 * @since 1.2.0
 	 *
 	 * Get a list of ships from the affiliation

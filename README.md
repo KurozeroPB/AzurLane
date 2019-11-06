@@ -3,15 +3,19 @@ Api wrapper for my azur lane api
 
 ## Example
 ```js
-const AzurLane = require("azurlane");
+const { AzurLane, Order } = require("azurlane");
 const azurlane = new AzurLane();
 
 async function main() {
-    const ship = await azurlane.ship("Akagi");
+    // Get specific ship by name, in this case "Akagi"
+    const ship = await azurlane.getShipByName("Akagi");
     console.log(`${ship.names.en}'s rarity is ${ship.rarity}`); // IJN Akagi's rarity is Super Rare
 
-    const build = await azurlane.buildInfo("00:24:00");
-    console.log(`Ships matching time ${build.time}: ${build.ships.join(", ")}`); // Ships matching time 00:24:00: Foxhound, Fortune, Dace, Albacore
+    // Get an array of ships with rarity "Super Rare"
+    const ships = await azurlane.getShips(Order.RARITY, "Super Rare");
+    for (let i = 0; i < ships.length; i++) {
+        console.log(`[${ships[i].id}] = ${ships[i].name}`); // [036] = San Diego
+    }
 }
 
 // Also catches any api errors that might occur like 400, 429, 500 http errors
