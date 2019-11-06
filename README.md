@@ -1,3 +1,29 @@
+<div align="center">
+    <br />
+    <p>
+        <a href="https://discord.gg/p895czC">
+            <img src="https://discordapp.com/api/guilds/240059867744698368/embed.png" alt="Discord server" />
+        </a>
+        <a href="https://www.npmjs.com/package/azurlane">
+            <img src="https://img.shields.io/npm/v/azurlane.svg?maxAge=3600" alt="NPM version" />
+        </a>
+        <a href="https://www.npmjs.com/package/azurlane">
+            <img src="https://img.shields.io/npm/dt/azurlane.svg?maxAge=3600" alt="NPM downloads" />
+        </a>
+        <a href="https://david-dm.org/KurozeroPB/azurlane">
+            <img src="https://img.shields.io/david/kurozeropb/azurlane.svg?maxAge=3600" alt="Dependencies" />
+        </a>
+        <a href="https://www.patreon.com/Kurozero">
+            <img src="https://img.shields.io/badge/donate-patreon-F96854.svg" alt="Patreon" />
+        </a>
+    </p>
+    <p>
+        <a href="https://nodei.co/npm/azurlane/">
+            <img src="https://nodei.co/npm/azurlane.png?downloads=true&stars=true" alt="NPM info" />
+        </a>
+    </p>
+</div>
+
 # AzurLane
 Api wrapper for my azur lane api
 
@@ -23,56 +49,11 @@ async function main() {
 main().catch(console.error);
 ```
 
-## Ship Data
-```json
-{   
-    "id": "224",
-    "names": {
-        "full": "IJN Akagi (cn: 凰; jp: 赤城)",
-        "en": "IJN Akagi",
-        "cn": "凰",
-        "jp": "赤城"
-    },
-    "thumbnail": "https://azurlane.koumakan.jp/w/images/3/3f/AkagiIcon.png",
-    "skins": [
-        { 
-            "title": "Default",
-            "image": "https://azurlane.koumakan.jp/w/images/thumb/0/06/Akagi.png/600px-Akagi.png"
-        },
-        {
-            "title": "Paradise Amaryllis",
-            "image": "https://azurlane.koumakan.jp/w/images/thumb/3/39/AkagiSummer.png/600px-AkagiSummer.png"
-        },
-        {
-            "title": "Plum and Snow",
-            "image": "https://azurlane.koumakan.jp/w/images/thumb/d/d0/AkagiNew_Year.png/533px-AkagiNew_Year.png"
-        },
-        {
-            "title": "Deep Crimson Poppy",
-            "image": "https://azurlane.koumakan.jp/w/images/thumb/6/65/AkagiPledge.png/505px-AkagiPledge.png"
-        } 
-    ],
-    "buildTime": "Drop Only",
-    "rarity": "Super Rare",
-    "stars": {
-        "value": "★★★☆☆☆",
-        "count": 3
-    },
-    "class": "Akagi",
-    "nationality": "Sakura Empire",
-    "hullType": "Aircraft Carrier"
-}
-```
+## Docs
+- Module Docs: https://kurozeropb.github.io/AzurLane/
+- Api Docs: https://kurozeropb.github.io/al-api/
 
-## Build Time Data
-```json
-{
-    "time": "00:24:00",
-    "ships": [
-        "Foxhound",
-        "Fortune",
-        "Dace",
-        "Albacore"
-    ]
-}
-```
+I recommend looking at the api docs to see what data is returned before spamming the api with useless requests only to see what it actually returns.
+
+## Support
+![discord](https://discordapp.com/api/v6/guilds/240059867744698368/widget.png?style=banner2)
