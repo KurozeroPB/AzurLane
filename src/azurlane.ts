@@ -112,16 +112,7 @@ export class AzurLane {
      */
     @deprecated("getShips", "1.3.0")
     public async getShipsWithRarity(rarity: string): Promise<IBaseShip[]> {
-        try {
-            const response = await axios.get<IShipsResponse>(`${this.baseUrl}/ships?orderBy=rarity&rarity=${rarity}`, this._axiosOptions);
-            return response.data.ships;
-        } catch (error) {
-            if (error.response && error.response.data) {
-                throw new ApiError(error.response.data);
-            } else {
-                throw error;
-            }
-        }
+        return await this.getShips(Order.RARITY, rarity);
     }
 
     /**
@@ -135,16 +126,7 @@ export class AzurLane {
      */
     @deprecated("getShips", "1.3.0")
     public async getShipsWithType(type: string): Promise<IBaseShip[]> {
-        try {
-            const response = await axios.get<IShipsResponse>(`${this.baseUrl}/ships?orderBy=type&type=${type}`, this._axiosOptions);
-            return response.data.ships;
-        } catch (error) {
-            if (error.response && error.response.data) {
-                throw new ApiError(error.response.data);
-            } else {
-                throw error;
-            }
-        }
+        return await this.getShips(Order.TYPE, type);
     }
 
     /**
@@ -158,16 +140,7 @@ export class AzurLane {
      */
     @deprecated("getShips", "1.3.0")
     public async getShipsWithAffiliation(affiliation: string): Promise<IBaseShip[]> {
-        try {
-            const response = await axios.get<IShipsResponse>(`${this.baseUrl}/ships?orderBy=affiliation&affiliation=${affiliation}`, this._axiosOptions);
-            return response.data.ships;
-        } catch (error) {
-            if (error.response && error.response.data) {
-                throw new ApiError(error.response.data);
-            } else {
-                throw error;
-            }
-        }
+        return await this.getShips(Order.AFFILIATION, affiliation);
     }
 
     /**
