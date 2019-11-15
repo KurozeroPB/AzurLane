@@ -1,6 +1,6 @@
 {
     "name": "azurlane",
-    "version": "1.4.1",
+    "version": "1.5.0",
     "description": "Api wrapper for the azur lane api",
     "main": "lib/index",
     "module": "lib/index.mjs",

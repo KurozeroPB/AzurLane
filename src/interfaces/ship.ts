@@ -25,8 +25,10 @@ export interface IStatsItem {
 
 export interface IStats {
     base?: IStatsItem[];
-    100?: IStatsItem[];
-    120?: IStatsItem[];
+    level100?: IStatsItem[];
+    level120?: IStatsItem[];
+    retrofit100?: IStatsItem[];
+    retrofit120?: IStatsItem[];
 }
 
 export interface IMiscellaneousInfo {

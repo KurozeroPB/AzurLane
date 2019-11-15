@@ -9,7 +9,7 @@ export interface IOptions {
     userAgent?: string;
 }
 
-export enum Order {
+export enum Category {
     RARITY = "rarity",
     TYPE = "type",
     AFFILIATION = "affiliation"
@@ -18,7 +18,7 @@ export enum Order {
 export class AzurLane {
     /** @hidden */
     private _axiosOptions: AxiosRequestConfig;
-    protected baseUrl = "https://azurlane-api.appspot.com/v1";
+    protected baseUrl = "https://azurlane-api.herokuapp.com/v2";
     public options: IOptions;
 
     /**
@@ -28,7 +28,7 @@ export class AzurLane {
      */
     public constructor(options?: IOptions) {
         this.options = options ? options : {};
-        this.options.userAgent = (options && options.userAgent) ? options.userAgent : `AzurLane/v1.0.0 (https://www.npmjs.com/package/azurlane)`;
+        this.options.userAgent = (options && options.userAgent) ? options.userAgent : `AzurLane/v1.5.0 (https://www.npmjs.com/package/azurlane)`;
 
         this._axiosOptions = {
             headers: {
@@ -84,13 +84,13 @@ export class AzurLane {
      * 
      * Get a list of ships from rarity, type or affiliation
      * 
-     * @param {Order} orderBy The order
-     * @param {string} value Value depends on what order is used, e.g. if `Order.RARITY` is used value can be `Super Rare`
+     * @param {Order} category The category
+     * @param {string} value Value depends on what category is used, e.g. if `Category.RARITY` is used value can be `Super Rare`
      * @returns {Promise<IBaseShip[]>}
      */
-    public async getShips(orderBy: Order, value: string): Promise<IBaseShip[]> {
+    public async getShips(category: Category, value: string): Promise<IBaseShip[]> {
         try {
-            const response = await axios.get<IShipsResponse>(`${this.baseUrl}/ships?orderBy=${orderBy}&${orderBy}=${value}`, this._axiosOptions);
+            const response = await axios.get<IShipsResponse>(`${this.baseUrl}/ships?category=${category}&${category}=${value}`, this._axiosOptions);
             return response.data.ships;
         } catch (error) {
             if (error.response && error.response.data) {
@@ -112,7 +112,7 @@ export class AzurLane {
      */
     @deprecated("getShips", "1.3.0")
     public async getShipsWithRarity(rarity: string): Promise<IBaseShip[]> {
-        return await this.getShips(Order.RARITY, rarity);
+        return await this.getShips(Category.RARITY, rarity);
     }
 
     /**
@@ -126,7 +126,7 @@ export class AzurLane {
      */
     @deprecated("getShips", "1.3.0")
     public async getShipsWithType(type: string): Promise<IBaseShip[]> {
-        return await this.getShips(Order.TYPE, type);
+        return await this.getShips(Category.TYPE, type);
     }
 
     /**
@@ -140,7 +140,7 @@ export class AzurLane {
      */
     @deprecated("getShips", "1.3.0")
     public async getShipsWithAffiliation(affiliation: string): Promise<IBaseShip[]> {
-        return await this.getShips(Order.AFFILIATION, affiliation);
+        return await this.getShips(Category.AFFILIATION, affiliation);
     }
 
     /**
