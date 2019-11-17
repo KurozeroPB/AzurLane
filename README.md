@@ -29,7 +29,7 @@ Api wrapper for my azur lane api
 
 ## Example
 ```js
-const { AzurLane, Order } = require("azurlane");
+const { AzurLane, Category } = require("azurlane");
 const azurlane = new AzurLane();
 
 async function main() {
@@ -38,20 +38,20 @@ async function main() {
     console.log(`${ship.names.en}'s rarity is ${ship.rarity}`); // IJN Akagi's rarity is Super Rare
 
     // Get an array of ships with rarity "Super Rare"
-    const ships = await azurlane.getShips(Order.RARITY, "Super Rare");
+    const ships = await azurlane.getShips(Category.RARITY, "Super Rare");
     for (let i = 0; i < ships.length; i++) {
         console.log(`[${ships[i].id}] = ${ships[i].name}`); // [036] = San Diego
     }
 }
 
 // Also catches any api errors that might occur like 400, 429, 500 http errors
-// Api errors extend the default error class, have a look at https://kurozeropb.github.io/AzurLane/classes/apierror.html for information
+// Api errors extend the default error class, have a look at https://azurlane-api.github.io/AzurLane/classes/apierror.html for information
 main().catch(console.error);
 ```
 
 ## Docs
-- Module Docs: https://kurozeropb.github.io/AzurLane/
-- Api Docs: https://kurozeropb.github.io/al-api/
+- Module Docs: https://azurlane-api.github.io/AzurLane/
+- Api Docs: https://azurlane-api.github.io/azurlane-api/
 
 I recommend looking at the api docs to see what data is returned before spamming the api with useless requests only to see what it actually returns.
 
