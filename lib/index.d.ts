@@ -83,6 +83,7 @@ export interface IBaseShip {
 	name: string;
 }
 export interface IOptions {
+	token: string;
 	userAgent?: string;
 }
 export declare enum Category {
@@ -100,7 +101,7 @@ export declare class AzurLane {
 	 * @param {IOptions} options Constructor options
 	 * @param {string} [options.userAgent] UA to use when making http requests
 	 */
-	constructor(options?: IOptions);
+	constructor(options: IOptions);
 	/**
 	 * @since 0.0.1
 	 *

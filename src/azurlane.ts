@@ -6,6 +6,7 @@ import { IShip, IShipResponse } from "./interfaces/ship";
 import { IBaseShip, IShipsResponse } from "./interfaces/ships";
 
 export interface IOptions {
+    token: string;
     userAgent?: string;
 }
 
@@ -24,14 +25,16 @@ export class AzurLane {
     /**
      *
      * @param {IOptions} options Constructor options
+     * @param {string} options.token The token to authorize the requests
      * @param {string} [options.userAgent] UA to use when making http requests
      */
-    public constructor(options?: IOptions) {
-        this.options = options ? options : {};
-        this.options.userAgent = (options && options.userAgent) ? options.userAgent : `AzurLane/v1.5.0 (https://www.npmjs.com/package/azurlane)`;
+    public constructor(options: IOptions) {
+        this.options = options;
+        this.options.userAgent = options.userAgent ? options.userAgent : "AzurLane/v1.6.0 (https://www.npmjs.com/package/azurlane)";
 
         this._axiosOptions = {
             headers: {
+                "Authorization": this.options.token,
                 "User-Agent": this.options.userAgent
             }
         };
